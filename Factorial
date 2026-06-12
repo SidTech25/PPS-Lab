@@ -1,0 +1,20 @@
+#include<stdio.h>
+int fact(int n);                         //function declaration
+int main(){
+    int n,ans;
+    printf("Enter number:\t");
+    scanf("%d",&n);
+
+    ans=fact(n);                         //function calling
+    printf("Answer is %d",ans);
+    return 0;
+}
+
+int fact(int n){                         //function definition
+    if(n==0 || n==1){
+        return 1;
+    }
+    else{
+        return n*fact(n-1);
+    }
+}
