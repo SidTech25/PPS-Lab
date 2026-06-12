@@ -1,0 +1,62 @@
+#include<stdio.h>
+
+int add(int a, int b){
+    return a + b;
+}
+
+int sub(int a, int b){
+    return a - b;
+}
+
+int mul(int a, int b){
+    return a * b;
+}
+
+float divi(int a, int b){
+    return (float)a / b;
+}
+
+int main(){
+    int a, b, choice;
+
+    printf("Enter first number: ");
+    scanf("%d", &a);
+
+    printf("Enter second number: ");
+    scanf("%d", &b);
+
+    printf("\n1. Addition");
+    printf("\n2. Subtraction");
+    printf("\n3. Multiplication");
+    printf("\n4. Division");
+
+    printf("\n\nEnter your choice: ");
+    scanf("%d", &choice);
+
+    switch(choice)
+    {
+        case 1:
+            printf("Addition = %d", add(a,b));
+            break;
+
+        case 2:
+            printf("Subtraction = %d", sub(a,b));
+            break;
+
+        case 3:
+            printf("Multiplication = %d", mul(a,b));
+            break;
+
+        case 4:
+            if(b != 0)
+                printf("Division = %.2f", divi(a,b));
+            else
+                printf("Division by zero is not possible");
+            break;
+        
+        default:
+            printf("Invalid Choice");
+    }
+
+    return 0;
+}
