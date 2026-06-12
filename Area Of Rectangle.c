@@ -11,7 +11,7 @@ scanf("%d",&b);
 A=l*b;
 printf("The Area of Rectangle is %d\n",A);
 
-P=2*(l*b);
+P=2*(l+b);
 printf("The Perimeter of Rectangle is %d",P);
 
 return 0;
